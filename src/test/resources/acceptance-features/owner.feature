@@ -39,7 +39,7 @@ Feature: Registro de Dueños de Mascotas
     Given el veterinario está en la página de búsqueda de dueños de mascotas
     When el veterinario ingresa "Rodriquez" en el campo Last Name
     And el veterinario hace clic en el botón Find Owner
-    Then el sistema debería dirigir a la pantalla de informacion del dueño
+    Then el sistema debería dirigir a la pantalla de detalles del dueño de mascota
     And muestra el texto "Eduardo Rodriquez" en el campo Name
     And muestra el texto "2693 Commerce St." en el campo Address
     And muestra el texto "McFarland" en el campo City
@@ -50,9 +50,9 @@ Feature: Registro de Dueños de Mascotas
     Given el veterinario está en la página de búsqueda de dueños de mascotas 
     When el veterinario ingresa "Rodriquez" en el campo Last Name 
     And el veterinario hace clic en el botón Find Owner 
-    Then el sistema debería dirigir a la pantalla de informacion del dueño 
-    And el veterinario hace clic en el botón Edit Owner 
     Then el sistema debería dirigir a la pantalla de detalles del dueño de mascota 
+    And el veterinario hace clic en el botón Edit Owner  
+    Then el sistema debería dirigir a la pantalla de informacion del dueño 
     And el veterinario ingresa "<City>" en el campo City 
     And el veterinario ingresa "<Telephone>" en el campo Telephone 
     And el veterinario hace clic en el botón Update Owner 
