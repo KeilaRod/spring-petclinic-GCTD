@@ -138,8 +138,23 @@ public class OwnerSteps {
 	}
 
 	@Then("el sistema debería dirigir a la pantalla de detalles del dueño de mascota")
-	public void owmerInfoCheckTitle() {
+	public void ownerCheckTitles() {
+		site.navBar.checkTitle(OWNER_FORM_TITLE);
+	}
+
+	@Then("el sistema debería dirigir a la pantalla de informacion del dueño")
+	public void checkOwnerInfoPage() {
 		site.navBar.checkTitle(OWNER_DETAILS_TITLE);
+	}
+
+	@When("el veterinario hace clic en el botón Edit Owner")
+	public void clickEditOwner() {
+		site.ownerDetails.editOwners();
+	}
+
+	@When("el veterinario hace clic en el botón Update Owner")
+	public void updateOwner() {
+		site.ownerDetails.updateOwners();
 	}
 
 }
